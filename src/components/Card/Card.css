@@ -14,7 +14,9 @@
 .img-container img{
     width: 100%;
     overflow: hidden;
-    height: 200px;
+    height: 150px;
+  object-fit: cover;
+
 }
 
 .card-content {
@@ -43,4 +45,75 @@
 
 .btn-delete:hover {
     transform: scale(1.1);
+    background: #f344;
+
 }
+
+.name{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* ------------contenido de la tarjeta---------------- */
+.card-content {
+    border-radius: 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    /* css grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "icono temperatura"
+      "icono viento"
+      "footer footer";
+  }
+  
+  .my-card-wind,
+  .my-card-lat,
+  .my-card-lng {
+    color: rgb(255, 255, 255);
+    margin: 5px;
+  }
+  
+  .card-icon {
+    grid-area: icono;
+    max-width: 165px;
+  }
+  
+  .my-card-temp {
+    color: #fff;
+    font-size: 2em;
+    grid-area: temperatura;
+    /* flexbox */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ther-img{
+    max-width: 40px;
+  }
+  
+  .my-card-wind {
+    grid-area: viento;
+    /* flexbox */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wind-img{
+    max-width: 30px;
+  }
+  
+  .my-card-footer {
+    grid-area: footer;
+    /* css grid */
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+  
+  }

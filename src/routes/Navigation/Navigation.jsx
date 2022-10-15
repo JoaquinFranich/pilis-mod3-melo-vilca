@@ -2,6 +2,8 @@ import { useContext, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import "./Navigation.css";
+import { FcLandscape } from "react-icons/fc";
+import { FaHome } from "react-icons/fa";
 
 const Navigation = () => {
 
@@ -24,18 +26,18 @@ const Navigation = () => {
         <>
             <div className="navigation">
                 <Link className="logo-container" to='/'>
-                    <h1>Logo</h1>
+                    <h1><FcLandscape></FcLandscape>Weather 6</h1>
                 </Link>
                 <div className="navigation-links">
                     <Link className="home" to='/'>
-                        Home
+                       <FaHome></FaHome> Home
                     </Link>
                     {currentUser ? (
                         <Link className="card" to='/createCard'>
                             Nueva Tarjeta
                         </Link>
                     ) : (
-                        <span style={{ color: 'red' }}>
+                        <span className="card" style={{ color: 'grey' }}>
                             Nueva Tarjeta
                         </span>
                     )}

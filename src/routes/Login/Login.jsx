@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext"
+import './Login.css'
 
 const Login = () => {
     const { setCurrentUser } = useContext(UserContext);
@@ -16,7 +17,7 @@ const Login = () => {
 
     return (
         <div className="sign-in-container">
-            <span>Ingresa usuario y contraseña</span>
+            <span className="sign-in-title">Ingresa usuario y contraseña</span>
             <form className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>
 
                 <input 
