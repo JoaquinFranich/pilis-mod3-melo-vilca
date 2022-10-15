@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
+import "./Navigation.css";
 
 const Navigation = () => {
 
@@ -22,15 +23,15 @@ const Navigation = () => {
     return (
         <>
             <div className="navigation">
-                <Link to='/'>
+                <Link className="logo-container" to='/'>
                     <h1>Logo</h1>
                 </Link>
                 <div className="navigation-links">
-                    <Link to='/'>
+                    <Link className="home" to='/'>
                         Home
                     </Link>
                     {currentUser ? (
-                        <Link to='/createCard'>
+                        <Link className="card" to='/createCard'>
                             Nueva Tarjeta
                         </Link>
                     ) : (
@@ -39,11 +40,11 @@ const Navigation = () => {
                         </span>
                     )}
                     {currentUser ? (
-                        <span onClick={handleSignOut}>
+                        <span className="logout" onClick={handleSignOut}>
                             Cerrar Sesion
                         </span>
                     ) : (
-                        <Link to='/login'>
+                        <Link className="login" to='/login'>
                             Iniciar Sesion
                         </Link>
                     )}

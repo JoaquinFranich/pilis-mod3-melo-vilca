@@ -1,1 +1,70 @@
-/* Estilos del navBar */
+.navigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #2c3e50;
+    box-shadow: 0 2px 3px 0 r(0, 0, 0, .1);
+    text-transform: uppercase;
+}
+
+.logo-container {
+    margin-left: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navigation-links {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    opacity: 0.9;
+}
+
+.home,
+.card,
+.login,
+.logout {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.login {
+    margin-right: 10px;
+}
+
+.logout {
+    margin-right: 10px;
+}
+
+.home:hover,
+.card:hover,
+.login:hover,
+.logout:hover {
+    opacity: 1;
+}
+
+.home::before,
+.card::before,
+.login::before,
+.logout::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: all .45s;
+}
+
+.home:hover::before,
+.card:hover::before,
+.login:hover::before,
+.logout:hover::before {
+    width: 100%;
+}

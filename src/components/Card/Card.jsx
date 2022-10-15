@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { CardsContext } from "../../context/CardsContext"
+import "./Card.css";
 
 
 const Card = ({card}) =>{
@@ -11,13 +12,13 @@ const Card = ({card}) =>{
     }
 
     return(
-        <div>
+        <div className="card-container">
             <p>ID: {id}</p>
             <p>Nombre: {name}</p>
             <p>Latitud: {latitude}</p>
             <p>Longitud: {longitude}</p>
-            <p>Temperatura: {temperature}</p>
-            <p>Viento: {windspeed}</p>
+            <p>Temperatura: {temperature} °C</p>
+            <p>Viento: {windspeed} m/s</p>
             <button onClick={deleteCard}>eliminar</button>
         </div>
     )
