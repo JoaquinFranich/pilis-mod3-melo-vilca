@@ -7,9 +7,40 @@
     margin-top: 25px;
     background-color: #1b3039;
     color: antiquewhite;
+    transition: 0.55s;
+    animation: ease-in;
+}
 
+.img-container img{
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+}
+
+.card-content {
+    justify-content: left;
+    margin: 1rem;
+    margin-top: 0.5rem;
+}
+
+.p {
+    margin: 0;
+    padding: 0;
 }
 
 .card-container:hover {
+    /* transform: scale(1.1); */
     box-shadow: rgba(0, 0, 0, 1.80) 0px 3px 8px;
+}
+
+.btn-delete {
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    color: #ffffff;
+    background: #f344;
+}
+
+.btn-delete:hover {
+    transform: scale(1.1);
 }
