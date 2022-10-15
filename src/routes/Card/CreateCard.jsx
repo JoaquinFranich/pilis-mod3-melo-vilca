@@ -23,7 +23,8 @@ const CreateCard = () => {
                     windspeed: res.current_weather.windspeed,
                     id: cards.length === 0 ? (1) : (cards[cards.length - 1].id + 1),
                 }
-                setCards([...cards, cardData])
+                setCards([...cards, cardData]);
+                localStorage.setItem('listaDeTarjetas', JSON.stringify([...cards, cardData]))
                 navigate('/')
             })
     }
